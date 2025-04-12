@@ -95,7 +95,7 @@ int main(int argc, char** argv)
 
 ### 4. **mycp** and **mymv**
 
-The `mycp` and `mymv` utilities don't have an output. These utilities just allow you to copy and move files from one location to another.
+The `mycp` and `mymv` utilities don't have an output on success. These utilities just allow you to copy and move files from one location to another.
 
 ---
 
