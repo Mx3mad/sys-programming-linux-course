@@ -6,11 +6,11 @@ This repository contains basic implementations of some common **Unix utilities**
 
 The project implements the following Unix utilities:
 
-- **pwd**: Prints the current working directory.
-- **echo**: Reprints the line of text passed as an argument.
-- **cat**: Prints the contents of file passed as an argument.
-- **cp**: Copies the contents of a file into another (basic implementation).
-- **mv**: Moves files from one location to another / rename a file (basic implementation).
+- **mypwd**: Prints the current working directory.
+- **myecho**: Reprints the line of text passed as an argument.
+- **mycat**: Prints the contents of file passed as an argument.
+- **mycp**: Copies the contents of a file into another (basic implementation).
+- **mymv**: Moves files from one location to another / rename a file (basic implementation).
 
 These utilities provide an essential introduction to working with Unix-like systems and how to mimic simple Unix tools using basic system calls and standard libraries in C.
 
