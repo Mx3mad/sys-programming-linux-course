@@ -40,7 +40,6 @@ Run the `mypwd` utility to display the current working directory:
 
 **Example Output:**
 ```
-The current working directory is:
 /home/mx3mad/Desktop/build_steps/apps
 ```
 
