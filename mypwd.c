@@ -7,7 +7,7 @@
 int main()
 {
 	int size = INIT_SIZE;
-	char* cur_working_dir = malloc(size);
+	char* cur_working_dir = (char*)malloc(size);
 	while(getcwd(cur_working_dir, size) == NULL)
 	{
 		size *= 2;
@@ -16,10 +16,10 @@ int main()
 			printf("Error: Failed to get the pathname (pathname is too long)\n");
 			exit(-1);
 		}
-		cur_working_dir = realloc(cur_working_dir, size);
+		cur_working_dir = (char*)realloc(cur_working_dir, size);
 	}
 
-	printf("The current working directory is:\n%s\n", cur_working_dir);
+	printf("%s\n", cur_working_dir);
 	free(cur_working_dir);
 	return 0;
 }

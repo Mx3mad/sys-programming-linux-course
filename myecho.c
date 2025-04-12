@@ -4,16 +4,17 @@
 int main(int argc, char** argv)
 {
 	if(argc < 2)
+   	{
+	       	printf("\n");
+	        exit(0);
+    	}
+    
+	for(int i = 1; i < argc; i++) 
 	{
-		printf("Usage: %s [The text to be echoed]\n\tThere is Nothing to be echoed\n", argv[0]);
-		exit(-1);
-	}
-	char** p;
-	for(p = argv+1; *p != NULL; p++)
-	{
-		printf("%s", *p);
-		if(*(p+1) != NULL) printf(" ");
-	}
+        	printf("%s", argv[i]);
+        	if(i < argc - 1) 
+			printf(" ");
+    	}
 	printf("\n");
 	return 0;
 }

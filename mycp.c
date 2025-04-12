@@ -17,13 +17,15 @@ int main(int argc, char** argv)
 		exit(-1);
 	}
 	int src_fd = open(argv[1], O_RDONLY);
-	int dst_fd = open(argv[2], O_WRONLY | O_CREAT, 0644);
 
 	if(src_fd < 0)
 	{
 		printf("Couldn't open the source file\n");
                 exit(-2);
 	}
+
+	int dst_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+
 	char file_content[FILE_SIZE];
 	int read_size;
 	while((read_size = read(src_fd, file_content, FILE_SIZE)) > 0)
