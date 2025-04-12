@@ -7,10 +7,10 @@ This repository contains basic implementations of some common **Unix utilities**
 The project implements the following Unix utilities:
 
 - **pwd**: Prints the current working directory.
-- **echo**: Displays a line of text passed as arguments.
-- **cat**: Concatenates and displays file contents.
-- **cp**: Copies files from one location to another (not fully implemented).
-- **mv**: Moves files from one location to another (not fully implemented).
+- **echo**: Reprints the line of text passed as an argument.
+- **cat**: Prints the contents of file passed as an argument.
+- **cp**: Copies the contents of a file into another (basic implementation).
+- **mv**: Moves files from one location to another / rename a file (basic implementation).
 
 These utilities provide an essential introduction to working with Unix-like systems and how to mimic simple Unix tools using basic system calls and standard libraries in C.
 
@@ -30,9 +30,9 @@ You can compile each utility separately by using the corresponding source file a
 
 ## Example Usage and Output
 
-### 1. **pwd**
+### 1. **mypwd**
 
-Run the `pwd` utility to display the current working directory:
+Run the `mypwd` utility to display the current working directory:
 
 ```bash
 ./mypwd
@@ -46,9 +46,9 @@ The current working directory is:
 
 ---
 
-### 2. **echo**
+### 2. **myecho**
 
-The `echo` utility prints a string to the terminal. Here’s how to use it:
+The `myecho` utility prints a string to the terminal. Here’s how to use it:
 
 ```bash
 ./myecho Hello My name is medo, hello world this is linux
@@ -61,9 +61,9 @@ Hello My name is medo, hello world this is linux
 
 ---
 
-### 3. **cat**
+### 3. **mycat**
 
-The `cat` utility displays the contents of a file. Here's an example using the source code for `myecho`:
+The `mycat` utility displays the contents of a file. Here's an example using the source code for `myecho`:
 
 ```bash
 ./mycat myecho.c
@@ -94,9 +94,9 @@ int main(int argc, char** argv)
 
 ---
 
-### 4. **cp** and **mv**
+### 4. **mycp** and **mymv**
 
-The `cp` and `mv` utilities have not been fully implemented yet. These utilities will allow you to copy and move files from one location to another once completed.
+The `mycp` and `mymv` utilities don't have an output. These utilities just allow you to copy and move files from one location to another.
 
 ---
 
