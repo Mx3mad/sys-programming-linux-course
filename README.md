@@ -104,8 +104,3 @@ The `mycp` and `mymv` utilities don't have an output. These utilities just allow
 
 There are no external dependencies required for this project. The utilities are implemented using the **C programming language** and utilize standard libraries.
 
----
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
