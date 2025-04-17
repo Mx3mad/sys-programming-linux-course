@@ -12,36 +12,39 @@ int main(int argc, char** argv)
 	}
 
 	char command[5] = "", input[IN_SIZE];
-	do
+	printf("FemtoSha > ");
+	while(fgets(input, IN_SIZE, stdin))
 	{
-		command[0] = '\0'; input[0] = '\0';
-		printf("FemtoSha > ");
-		if(fgets(input, IN_SIZE, stdin) == NULL)
+		if(strlen(input) == 1 && input[0] == '\n')
 		{
 			printf("Please enter something, anything, please.\n");
+			command[0] = '\0'; input[0] = '\0';
+	                printf("FemtoSha > ");
 			continue;
 		}
 		int i;
 		for(i = 0; i < 4 && input[i] != '\0'; i++)
 			command[i] = input[i];
 		command[i] = '\0';
-		if(strcmp(command, "echo") != 0 && strcmp(command, "exit") != 0)
-		{
-			printf("Invalid command\n");
-			continue;
-		}
 		//printf("%s\n", command);
 		if(strcmp(command, "echo") == 0)
 		{
-			//printf("echoing...\n");
 			i++;
 			char *output = &input[i];
 			printf("%s", output);	
 		}
+		else if(strcmp(command, "exit") == 0)
+		{
+			printf("See u later (>ᴗ<)づ\n");
+			break;
+		}
+		else
+			printf("Invalid command\n");
+		command[0] = '\0'; input[0] = '\0';
+                printf("FemtoSha > ");
 
-	} while(strcmp(command, "exit") != 0);
+	}
 	
-	printf("See u later (>ᴗ<)づ\n");
 	return 0;
 
 }
