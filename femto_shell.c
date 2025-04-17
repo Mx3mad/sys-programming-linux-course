@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define IN_SIZE 8192
+#define IN_SIZE 16384
 int main(int argc, char** argv)
 {
 	if(argc > 1)
