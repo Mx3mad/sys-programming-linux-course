@@ -20,8 +20,6 @@ int main(int argc, char **argv)
 	while (1)
 	{
 		input[0] = 0;
-		if (feof(stdin))
-			break;
 		printf("PicoSha >> ");
 		fflush(stdout);
 		if (fgets(input, IN_SIZE, stdin) == NULL)
