@@ -42,8 +42,11 @@ void dolla_sign_op(char* input, char** local_vars)
 
         if (!found)
         {
-            printf("%s: Undefined variable\n", dolla_arg);
-            break;
+            char* end_of_var = dolla_arg;
+            while (*end_of_var != ' ' && *end_of_var != '\0')
+                end_of_var++;
+
+            memmove(dolla_pos, end_of_var, strlen(end_of_var) + 1);
         }
 
         dolla_pos = strchr(input, '$');
