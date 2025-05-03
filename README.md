@@ -1,6 +1,6 @@
-# Simple Unix Utilities
+# Simple Unix Utilities and Shells
 
-This repository contains basic implementations of some common **Unix utilities** written in **C**. The utilities implemented include `pwd`, `echo`, `cat`, `cp`, and `mv`, which are standard tools used in Unix-like operating systems.
+This repository contains basic implementations of some common **Unix utilities** written in **C**. The utilities implemented include `pwd`, `echo`, `cat`, `cp`, and `mv`, which are standard tools used in Unix-like operating systems. Additionally, various custom shells have been implemented.
 
 ## Description
 
@@ -99,7 +99,67 @@ The `mycp` and `mymv` utilities don't have an output on success. These utilities
 
 ---
 
+## Custom Shell Implementations
+
+## Compilation Command
+
+They are compiled using the GCC (GNU Compiler Collection). The following command compiles all the shells:
+
+```bash
+gcc -o femto femto_shell.c
+gcc -o pico pico_shell.c
+gcc -o nano nano_shell.c
+gcc -o micro micro_shell.c
+```
+
+The project includes the following custom shell programs, providing an introduction to shell programming concepts:
+
+### 1. **Femto Shell**
+- **File**: [`femto_shell.c`](https://github.com/Mx3mad/sys-programming-linux-course/blob/main/femto_shell.c)
+- **Description**: A simple shell that supports basic commands like `echo` and `exit`. It provides a minimal interactive command-line interface.
+- **Usage**:
+  ```bash
+  ./femto
+  FemtoSha > echo Hello World
+  Hello World
+  ```
+
+### 2. **Pico Shell**
+- **File**: [`pico_shell.c`](https://github.com/Mx3mad/sys-programming-linux-course/blob/main/pico_shell.c)
+- **Description**: A shell that supports additional built-in commands like `pwd`, and `cd`, along with UNIX commands execution by forking processes.
+- **Usage**:
+  ```bash
+  ./pico
+  PicoSha >> pwd
+  /home/user
+  PicoSha >> cd /tmp
+  ```
+
+### 3. **Nano Shell**
+- **File**: [`nano_shell.c`](https://github.com/Mx3mad/sys-programming-linux-course/blob/main/nano_shell.c)
+- **Description**: Expands functionality with support for local and environment variables manipulation.
+- **Usage**:
+  ```bash
+  ./nano
+  NanoSha >> x=5
+  NanoSha >> echo $x
+  ```
+
+### 4. **Micro Shell**
+- **File**: [`micro_shell.c`](https://github.com/Mx3mad/sys-programming-linux-course/blob/main/micro_shell.c)
+- **Description**: A more advanced shell that includes input/output redirection.
+- **Usage**:
+  ```bash
+  ./micro
+  MicroSha >> ls > output.txt
+  MicroSha >> echo Hello
+  MicroSha >> cat < /tmp/input_iored.txt
+  MicroSha >> echo World!
+  ```
+
+---
+
 ## Dependencies
 
-There are no external dependencies required for this project. The utilities are implemented using the **C programming language** and utilize standard libraries.
+This project does not require external dependencies. The utilities are implemented using the C programming language and utilize standard libraries.
 
